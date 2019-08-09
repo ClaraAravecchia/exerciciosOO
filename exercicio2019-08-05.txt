@@ -1,7 +1,0 @@
-ATRIBUTOS				MÉTODOS
-- peso(float)			ensinar()
-- altura(float)			corrigirProva()
-- cor do cabelo(str)	corrigirExercicio()	
-- cor dos olhos(str)
-- formação(str)
-- idade(int)
