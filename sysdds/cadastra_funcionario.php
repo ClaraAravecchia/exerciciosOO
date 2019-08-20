@@ -6,14 +6,14 @@
 </head>
 <body>
     <?php
-        include ("classePessoa.php");
+        include ("classeFuncionario.php");
         include ("cabecalho.php");       
 
-        $pessoa = new Pessoa($_POST);
+        $pessoa = new Funcionario($_POST);
 
         session_start();
-        $_SESSION["cliente"][] = $pessoa;
-        echo "Cliente cadastrado com sucesso!";
+        $_SESSION["funcionario"][] = $pessoa;
+        echo "Funcionario cadastrado com sucesso!";
         $pessoa->imprime();
 
                 

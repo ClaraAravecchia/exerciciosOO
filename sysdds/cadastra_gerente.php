@@ -6,15 +6,15 @@
 </head>
 <body>
     <?php
-        include ("classeProduto.php");
+        include ("classeGerente.php");
         include ("cabecalho.php");       
 
-        $produto = new Produto($_POST);
+        $pessoa = new Gerente($_POST);
 
         session_start();
-        $_SESSION["produto"][] = $produto;
-        echo "Produto cadastrado com sucesso!";
-        $produto->exibicao_unitaria();
+        $_SESSION["gerente"][] = $pessoa;
+        echo "Gerente cadastrado com sucesso!";
+        $pessoa->imprime();
 
                 
     ?>

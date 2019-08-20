@@ -1,35 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Formulário</title>
-</head>
-<body>
-    <form action="cadastra_pessoa.php" method="POST">
-        <?php
-            include ("cabecalho.php");
-            if(empty($_POST)){
-                echo "<p><label>Nome:</label>";
-                echo "<input type=\"text\" name=\"nome\"/></p>";
 
-                echo "<p><label>Email:</label>";
-                echo "<input type=\"email\" name=\"email\" /></p>";
+<p><label>Nome:</label>
+<input type="text" name="nome"/></p>
 
-                echo "<p><label>CPF:</label>";
-                echo "<input type=\"text\" name=\"cpf\" /></p>";
-                
-                echo "<p><label>Sexo:</label>";
-                echo "<input type=\"radio\" name=\"sexo\" value=\"Masculino\"/>Masculino
-                <input type=\"radio\" name=\"sexo\" value=\"Feminino\"/>Feminino</p>";
-                
-                echo "<p><label>Data Nasc::</label>";
-                echo "<input type=\"date\" name=\"data_nascimento\" /></p>";
+<p><label>Email:</label>
+<input type="email" name="email" /></p>
 
-                echo "<p><label></label>";
-                echo "<input type=\"submit\"  value=\"Enviar\"/></p>";  
-            }
-            
-        ?>
-    </form>
-</body>
-</html>
+<p><label>CPF:</label>
+<input type="text" name="cpf" /></p>
+
+<p><label>Sexo:</label>
+<input type="radio" name="sexo" value="Masculino"/>Masculino
+<input type="radio" name="sexo" value="Feminino"/>Feminino</p>
+
+<p><label>Data Nasc::</label>
+<input type="date" name="data_nascimento" /></p>
+
+<p><label>Endereço</label>
+<input type="text"  name="endereco"/></p>  
+
+<p><label>Cidade</label>
+<input type="text"  name="cidade"/></p>  
+
+<p><label>Estado</label>
+<input type="text"  name="estado"/></p>  
+
+<p><label>País</label>
+<input type="text"  name="pais"/></p>  

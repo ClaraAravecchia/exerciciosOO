@@ -19,7 +19,11 @@
             <th>Email</th>
             <th>CPF</th>
             <th>Sexo</th>
-            <th>Data Nasc</th>
+            <th>Endereço</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>País</th>
+
         <tr>
         </thead>
         <tbody>

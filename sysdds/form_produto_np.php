@@ -5,7 +5,7 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="cadastra_produto.php" method="POST">
+    <form action="cadastra_produto_np.php" method="POST">
         <?php
             include ("cabecalho.php");
             if(empty($_POST)){

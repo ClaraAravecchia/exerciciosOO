@@ -21,6 +21,9 @@
                 echo "<p><label>Preço</label>";
                 echo "<input type=\"number\" name=\"preco\" /></p>";
 
+                echo "<p><label>Validade</label>";
+                echo "<input type=\"date\" name=\"validade\" /></p>";
+
                 echo "<p><label></label>";
                 echo "<input type=\"submit\"  value=\"Enviar\"/></p>";  
             }
