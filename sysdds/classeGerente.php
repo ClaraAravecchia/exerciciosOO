@@ -12,7 +12,7 @@
         }
 
         function imprime(){
-            //$this->imprime();
+            $this->imprime_pessoa();
             $texto = "<fieldset>Area: ".$this->area."<br/>Salario: ".$this->salario.
             "<br/></fieldset>";
             echo $texto; 
@@ -20,7 +20,7 @@
 
         function exibe_tr(){
             $this->exibe_tr_pessoa();
-            echo "<tr>
+            echo "
                     <td>".$this->area."</td>
                     <td>".$this->salario."</td>
             </tr>";

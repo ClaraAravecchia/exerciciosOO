@@ -8,9 +8,9 @@
 </head>
 <body>
     <?php
-        include ("classePessoa.php");
-        include ("cabecalho.php"); 
-        echo " <h2>Lista de Clientes</h2>";        
+        include ("classeProdutoNP.php");
+        include ("cabecalho.php");  
+        echo " <h2>Lista de Produtos Não Perecíveis</h2>";       
         session_start();           
     ?>
 
@@ -18,21 +18,16 @@
         <thead>
         <tr>
             <th>Nome</th>
-            <th>Email</th>
-            <th>CPF</th>
-            <th>Sexo</th>
-            <th>Data de Nascimento</th>
-            <th>Endereço</th>
-            <th>Cidade</th>
-            <th>Estado</th>
-            <th>País</th>
+            <th>Descrição</th>
+            <th>Unidade</th>
+            <th>Preço</th>
 
         <tr>
         </thead>
         <tbody>
         <?php
-        foreach($_SESSION["cliente"] as $i=>$p){
-            $p->exibe_tr_pessoa();
+        foreach($_SESSION["produtoNP"] as $i=>$p){
+            $p->exibe_tr();
         }
         ?>
         </tbody>

@@ -23,7 +23,7 @@
         }
 
 
-        function imprime(){
+        function imprime_pessoa(){
             $texto = "<fieldset>Nome: ".$this->nome."<br/>Email: ".$this->email.
             "<br/>CPF: ".$this->cpf."<br/>Sexo: ".$this->sexo."<br/>Data Nasc: ".
             $this->data_nascimento."<br/>Endereço:".$this->endereco."<br/>Cidade:".$this->cidade.
@@ -41,8 +41,7 @@
                     <td>".$this->endereco."</td>
                     <td>".$this->cidade."</td>
                     <td>".$this->estado."</td>
-                    <td>".$this->pais."</td>
-            </tr>";
+                    <td>".$this->pais."</td>";
         }
     }
 ?>

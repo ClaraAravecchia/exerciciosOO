@@ -14,13 +14,13 @@
         }
 
 
-        function exibicao_unitaria(){
+        function imprime(){
             echo "<fieldset>Nome: ".$this->nome."<br/>Descrição: ".$this->descricao.
             "<br/>Unidade: ".$this->unidade."<br/>Preço: ".
             $this->preco."</fieldset>";
         }
 
-        function exibicao_tabela(){
+        function exibe_tr(){
             echo "<tr>
                     <td>".$this->nome."</td>
                     <td>".$this->descricao."</td>

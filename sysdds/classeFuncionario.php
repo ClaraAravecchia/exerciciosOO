@@ -15,15 +15,18 @@
 
 
         function imprime(){
+            $this->imprime_pessoa();
             $texto = "<fieldset>Area: ".$this->area."<br/>Salario: ".$this->salario.
             "<br/>Turno:".$this->turno."<br/></fieldset>";
             echo $texto; 
         }
 
         function exibe_tr(){
-            echo "<tr>
+            $this->exibe_tr_pessoa();
+            echo "
                     <td>".$this->area."</td>
                     <td>".$this->salario."</td>
+                    <td>".$this->turno."</td>
             </tr>";
         }
     }

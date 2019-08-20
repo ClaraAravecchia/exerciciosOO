@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Bem Vindo</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
 </head>
 <body>
     <?php

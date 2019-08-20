@@ -8,9 +8,9 @@
 </head>
 <body>
     <?php
-        include ("classePessoa.php");
-        include ("cabecalho.php"); 
-        echo " <h2>Lista de Clientes</h2>";        
+        include ("classeGerente.php");
+        include ("cabecalho.php");  
+        echo " <h2>Lista de Gerentes</h2>";       
         session_start();           
     ?>
 
@@ -26,13 +26,15 @@
             <th>Cidade</th>
             <th>Estado</th>
             <th>País</th>
+            <th>Área</th>
+            <th>Salário</th>
 
         <tr>
         </thead>
         <tbody>
         <?php
-        foreach($_SESSION["cliente"] as $i=>$p){
-            $p->exibe_tr_pessoa();
+        foreach($_SESSION["gerente"] as $i=>$p){
+            $p->exibe_tr();
         }
         ?>
         </tbody>

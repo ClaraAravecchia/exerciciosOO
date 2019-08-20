@@ -1,0 +1,53 @@
+header, section, footer, aside, nav, article, figure, figcaption {
+    display: block;
+}
+body {
+	background-position: center;
+	font-family: Georgia, Times, serif;
+	line-height: 1.4em;
+    margin: 0px;
+}
+
+
+nav{
+	padding: 1em;
+	background-color: rgb(99, 104, 103);
+	
+}
+
+nav p{
+	display: inline;
+	margin: 15px;
+    font-size: 18px;
+}
+
+a {
+    color: rgb(145, 18, 50);
+    margin-left:10px;
+}
+h1, h2, h3 {
+	font-weight: normal;
+	text-align: center;
+    color:#610B21; 
+}
+
+input{
+	width: 150px;
+}
+label{
+    display: inline-block;
+    width: 200px;
+	text-align: right;
+}
+tbody tr:nth-child(odd){  /*pinta todas as linhas da tabela q forem ímpares(odd)*/
+    background-color: #F5A9A9; 
+}
+table{
+    width:70%;
+    float: left;
+    margin: 10px;
+}
+fieldset{
+    font-size: 18px;
+    
+}

@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
 </head>
 <body>
     <form action="cadastra_produto_np.php" method="POST">
         <?php
             include ("cabecalho.php");
-            if(empty($_POST)){
+            echo " <h2>Cadastro de Produto Não Perecível</h2>";
                 echo "<p><label>Nome:</label>";
                 echo "<input type=\"text\" name=\"nome\"/></p>";
 
@@ -23,7 +24,7 @@
 
                 echo "<p><label></label>";
                 echo "<input type=\"submit\"  value=\"Enviar\"/></p>";  
-            }
+            
             
         ?>
     </form>

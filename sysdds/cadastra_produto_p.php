@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
 </head>
 <body>
     <?php
-        include ("classeProduto.php");
+        include ("classeProdutoP.php");
         include ("cabecalho.php");       
 
-        $produto = new Produto($_POST);
+        $produto = new ProdutoP($_POST);
 
         session_start();
         $_SESSION["produtoP"][] = $produto;
         echo "Produto cadastrado com sucesso!";
-        $produto->exibicao_unitaria();
+        $produto->imprime();
 
                 
     ?>
