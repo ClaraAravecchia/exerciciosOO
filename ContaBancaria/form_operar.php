@@ -1,5 +1,5 @@
 <?php
-     if (isset($_GET["conta"])){
+    if (isset($_GET["conta"])){
         $conta = $_GET["conta"];
     }
     else{
@@ -8,11 +8,12 @@
 
     echo "<p>
         <label>Número da Conta</label>
+        
         <input type=\"number\" name=\"num_conta\" value=\"$conta\" />
     </p>";
 ?>
 <p>
-    <label>Oparação:</label>
+    <label>Operação:</label>
     <select name="operacao">
         <option value="saque">Saque</option>
         <option value="deposito">deposito</option>

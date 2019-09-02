@@ -9,7 +9,7 @@
         }
 
         public function sacar($valor){
-            if ($this->saldo > $this->limite){
+            if ($this->saldo >= $this->limite){
                 $this->saldo -= $valor;
                 return "Conta:".$this->nroConta."<br/>Saldo:".$this->saldo;
             }

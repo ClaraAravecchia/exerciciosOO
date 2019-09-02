@@ -1,10 +1,14 @@
 <?php
     class ContaCorrente{
         private $cpf;
-        public $nome;
-        public $email;
-        public $nroConta;
+        private $nome;
+        private $email;
+        private $nroConta;
         protected $saldo;
+
+        public function get_nroConta(){
+            return $this->nroConta;
+        }
 
         function __construct($vetor){
             $this->cpf = $vetor["cpf"];
@@ -20,7 +24,7 @@
             return "Conta:".$this->nroConta."<br/>Saldo:".$this->saldo;
         }
         public function sacar($valor){   /////////////////////////////
-            if ($this->saldo > $valor){
+            if ($this->saldo >= $valor){
                 $this->saldo -= $valor;
                 return "Conta:".$this->nroConta."<br/>Saldo:".$this->saldo;
             }

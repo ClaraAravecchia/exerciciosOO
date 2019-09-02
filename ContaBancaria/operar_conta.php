@@ -13,12 +13,11 @@
                 include ("form_operar.php");
             }
             else{
-                //include ("classeContaCorrente.php");
                 include ("classeContaEspecial.php");
                 session_start();
                 
                 foreach($_SESSION["conta_bancaria"] as $i=>$c){
-                    if ($_POST["num_conta"] == $c->nroConta){   /// procura o objeto que tem aquele num de conta
+                    if ($_POST["num_conta"] == $c->get_nroConta()){   /// procura o objeto que tem aquele num de conta
                         if ($_POST["operacao"] == "saque"){
                             echo $c->sacar($_POST["valor"]);
                             
