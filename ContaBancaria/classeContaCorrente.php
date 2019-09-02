@@ -4,7 +4,7 @@
         public $nome;
         public $email;
         public $nroConta;
-        private $saldo;
+        protected $saldo;
 
         function __construct($vetor){
             $this->cpf = $vetor["cpf"];
@@ -37,7 +37,7 @@
                     <td>".$this->cpf."</td>
                     <td>".$this->nome."</td>
                     <td>".$this->email."</td>
-                    <td>".$this->nroConta."</td>
+                    <td><a href=\"operar_conta.php?conta=$this->nroConta\" >".$this->nroConta."</a></td>
                     <td>".$this->saldo."</td>
             </tr>";
         }

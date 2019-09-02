@@ -13,7 +13,8 @@
                 include ("form_operar.php");
             }
             else{
-                include ("classeContaCorrente.php");
+                //include ("classeContaCorrente.php");
+                include ("classeContaEspecial.php");
                 session_start();
                 
                 foreach($_SESSION["conta_bancaria"] as $i=>$c){
@@ -35,3 +36,4 @@
     </form>
 </body>
 </html>
+
