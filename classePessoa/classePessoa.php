@@ -6,19 +6,19 @@
         public $sexo;
         public $data_nascimento;
 
-        function __construct($n, $e, $c, $s, $d){
-            $this->nome = $n;
-            $this->email = $e;
-            $this->cpf = $c;
-            $this->sexo = $s;
-            $this->data_nascimento = $d;
+        function __construct($vetor){
+            $this->nome = $vetor['nome'];
+            $this->email = $vetor['email'];
+            $this->cpf = $vetor['cpf'];
+            $this->sexo = $vetor['sexo'];
+            $this->data_nascimento = $vetor['data_nascimento'];
         }
 
 
         function imprime(){
             $texto = "<fieldset>Nome: ".$this->nome."<br/>Email: ".$this->email.
             "<br/>CPF: ".$this->cpf."<br/>Sexo: ".$this->sexo."<br/>Data Nasc: ".
-            $this->dataNasc."</fieldset>";
+            $this->data_nascimento."</fieldset>";
             echo $texto; 
         }
 
@@ -28,7 +28,7 @@
                     <td>".$this->email."</td>
                     <td>".$this->cpf."</td>
                     <td>".$this->sexo."</td>
-                    <td>".$this->dataNasc."</td>
+                    <td>".$this->data_nascimento."</td>
             </tr>";
         }
     }

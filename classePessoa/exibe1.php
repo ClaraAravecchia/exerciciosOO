@@ -9,13 +9,13 @@
         include ("classePessoa.php");
         include ("cabecalho.php");       
 
-        $pessoa = new Pessoa();
+        $pessoa = new Pessoa($_POST);
 
-        $pessoa->nome     = $_POST["nome"];
-        $pessoa->email    = $_POST["email"];
-        $pessoa->cpf      = $_POST["cpf"];
-        $pessoa->sexo     = $_POST["sexo"];
-        $pessoa->dataNasc = $_POST["data"];
+        // $pessoa->nome     = $_POST["nome"];
+        // $pessoa->email    = $_POST["email"];
+        // $pessoa->cpf      = $_POST["cpf"];
+        // $pessoa->sexo     = $_POST["sexo"];
+        // $pessoa->dataNasc = $_POST["data"];
 
         session_start();
         $_SESSION["pessoa"][] = $pessoa;

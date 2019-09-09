@@ -23,7 +23,7 @@
                 <input type=\"radio\" name=\"sexo\" value=\"Feminino\"/>Feminino</p>";
                 
                 echo "<p><label>Data Nasc::</label>";
-                echo "<input type=\"date\" name=\"data\" /></p>";
+                echo "<input type=\"date\" name=\"data_nascimento\" /></p>";
 
                 echo "<p><label></label>";
                 echo "<input type=\"submit\"  value=\"Enviar\"/></p>";  
