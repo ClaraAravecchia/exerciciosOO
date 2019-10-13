@@ -1,0 +1,4 @@
+<div id="menu" style="border:1px solid;padding:5px;">
+	<a href="FORM/cadastroVitima.php">Cadastro de Vítima </a> | 
+	<a href="LISTA/lista_vitima.php">Listar</a>
+</div>
