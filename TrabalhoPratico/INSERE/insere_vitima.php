@@ -14,17 +14,23 @@ if(!empty($_POST)){
     $SEXO=$_POST["SEXO"];
     $DATA_NASC=$_POST["DATA_NASC"];  
     $CAT = $_POST["CAT"];
-    $DATA = $_POST["DATA_CAT"]  
+    $DATA = $_POST["DATA_CAT"]  ;
 
     $insert = "USE CATASTROFE;
                 INSERT INTO PAIS(NOME) VALUES (:pais);
-                INSERT INTO ESTADO_PROVINCIA(NOME) VALUES (:estado);
-                INSERT INTO CIDADE(NOME) VALUES (:cidade);
-                INSERT INTO VITIMA(NOME, EMAIL, SEXO, DATA_NASCIMENTO)
-                         VALUES (:nome, :email, :sexo, :data_nasc);
-                INSERT INTO CATASTROFE VALUES(:cat, :data)";
+                INSERT INTO ESTADO_PROVINCIA(NOME, COD_PAIS) VALUES (:estado, (
+                    SELECT MAX(ID_PAIS) FROM PAIS
+                ));
+                INSERT INTO CIDADE(NOME, COD_ESTADO_PROVINCIA) VALUES (:cidade, (
+                    SELECT MAX(ID_ESTADO_PROVINCIA) FROM ESTADO_PROVINCIA
+                ));
+                INSERT INTO VITIMA(NOME, EMAIL, SEXO, DATA_NASCIMENTO, COD_CIDADE)
+                         VALUES (:nome, :email, :sexo, :data_nasc, (
+                                    SELECT MAX(ID_CIDADE) FROM CIDADE
+                         ));
+                INSERT INTO CATASTROFE(NOME, DATA_CATASTROFE) VALUES(:cat, :data)";
 
-	$stmt = $conexao->prepare($insert);
+    $stmt = $conexao->prepare($insert);
 
 	$stmt->bindValue(":pais",$PAIS);
 	$stmt->bindValue(":estado",$ESTADO);

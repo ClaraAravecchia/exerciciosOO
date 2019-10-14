@@ -4,7 +4,9 @@
 	
 	include("../conexao.php");
 	
-	$sql = "SELECT * FROM DOADOR ORDER BY NOME";
+	$sql = "SELECT * FROM DOADOR 
+                INNER JOIN DOACAO ON ID_DOADOR = COD_DOADOR 
+                ORDER BY NOME;";
 	
 	$stmt = $conexao->prepare($sql);
 	
@@ -16,6 +18,9 @@
 				<th>NOME</th>
 				<th>EMAIL</th>
                 <th>SEXO</th>
+                <th>CIDADE</th>
+                <th>VALOR</th>
+                <th>REMOVER</th>
 			</tr>
 		  </thead>
 		  <tbody>
@@ -24,11 +29,15 @@
 		echo "<tr>
 				<td>".$linha["NOME"]."</td>
 				<td>".$linha["EMAIL"]."</td>
-				<td>".$linha["SEXO"]."</td>
+                <td>".$linha["SEXO"]."</td>
+                <td>".$linha["COD_CIDADE"]."</td>
+                <td>".$linha["VALOR"]."</td>
 				<td>
-					<form method='post' action='../REMOVE/remover.php'>
+                    <form method='post' action='../REMOVE/remover.php'>
+                        <input type='hidden' name='tabela' value='DOACAO' />
+                        <input type='hidden' name='id' value='".$linha["ID_DOACAO"]."' />
 						<input type='hidden' name='tabela' value='DOADOR' />
-						<input type='hidden' name='id' value='".$linha["ID_DOADOR"]."' />
+                        <input type='hidden' name='id' value='".$linha["ID_DOADOR"]."' />
 						<button>Remover</button>
 					</form>
 					

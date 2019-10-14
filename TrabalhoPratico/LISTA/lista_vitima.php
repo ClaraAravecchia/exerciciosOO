@@ -17,7 +17,8 @@
 				<th>EMAIL</th>
                 <th>SEXO</th>
                 <th>DATA DE NASCIMENTO</th>
-                <th>CIDADE</th>
+				<th>CIDADE</th>
+				<th>REMOVER</th>
 			</tr>
 		  </thead>
 		  <tbody>

@@ -6,9 +6,18 @@
     require_once("../classeForm/InterfaceExibicao.php");
     require_once("../classeForm/classeInput.php");
     require_once("../classeForm/classeForm.php");
+    require_once("../classeForm/classeSelect.php");
+    require_once("../classeForm/classeOption.php");
     
     include("../conexao.php");
-    
+    $select = "SELECT ID_CIDADE AS value, NOME AS texto FROM CIDADE ORDER BY NOME";
+	
+	$stmt = $conexao->prepare($select);
+	$stmt->execute();
+	
+	while($linha=$stmt->fetch()){
+		$matriz[] = $linha;
+	}	
 
     $v = array("action"=>"../INSERE/insere_doador.php","method"=>"post");
 	$f = new Form($v);
@@ -24,6 +33,12 @@
     //$f->add_select($v, $sexo);
     
     $v = array("type"=>"text","name"=>"SEXO","placeholder"=>"SEXO...");
+    $f->add_input($v);
+
+    $v = array("name"=>"CIDADE");
+    $f->add_select($v,$matriz);
+    
+    $v = array("type"=>"number","name"=>"VALOR","placeholder"=>"VALOR...");
     $f->add_input($v);
 	
 	$v = array("type"=>"submit","name"=>"ENVIAR", "value"=>"ENVIAR");

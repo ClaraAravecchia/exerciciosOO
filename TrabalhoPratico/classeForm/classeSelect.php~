@@ -8,6 +8,12 @@ class Select implements Exibicao{
 	
 	public function __construct($vetor,$matriz){
 		$this->name=$vetor["name"];
+		if(isset($vetor["value"]){
+			$this->texto = 	$vetor["value"];
+		}
+		else{
+			$this->texto = "::selecione::";
+		}
 		foreach($matriz as $i=>$vetor){
 			$this->lista_option[] = new Option($vetor);
 		}
@@ -16,7 +22,7 @@ class Select implements Exibicao{
 	public function exibe(){
 		
 		echo "<select name='$this->name'>
-			  <option>::selecione::</option>";
+			  <option>$this->texto</option>";
 		
 		foreach($this->lista_option as $o){
 			$o->exibe();
