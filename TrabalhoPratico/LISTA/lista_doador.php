@@ -34,8 +34,7 @@
                 <td>".$linha["VALOR"]."</td>
 				<td>
                     <form method='post' action='../REMOVE/remover.php'>
-                        <input type='hidden' name='tabela' value='DOACAO' />
-                        <input type='hidden' name='id' value='".$linha["ID_DOACAO"]."' />
+                    
 						<input type='hidden' name='tabela' value='DOADOR' />
                         <input type='hidden' name='id' value='".$linha["ID_DOADOR"]."' />
 						<button>Remover</button>

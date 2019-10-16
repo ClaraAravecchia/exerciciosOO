@@ -4,12 +4,12 @@
 	
 	include("../conexao.php");
 	include("../classeControllerBD.php");
-	
+	echo "Hello";
 	$ctrl = New ControllerBD($conexao);
     $ctrl->remover($_POST["id"],$_POST["tabela"]);
     
     $str = strtolower($_POST["tabela"]);
-
+	echo "Controller";
 ?>
 <hr />
 <a href='../LISTA/lista_<?=$str;?>.php'>Voltar Para a listagem</a>

@@ -9,13 +9,16 @@
 		}
 		
 		public function remover($id,$tabela){
-			$delete = "DELETE FROM $tabela WHERE ID_$tabela = :id";
+			try{
+				$delete = "DELETE FROM $tabela WHERE ID_$tabela = :id";
 
-			$stmt = $this->conexao->prepare($delete);
-			$stmt->bindValue(":id",$id);
-			$stmt->execute();
-			echo "removido(a) com sucesso";
-			
+				$stmt = $this->conexao->prepare($delete);
+				$stmt->bindValue(":id",$id);
+				$stmt->execute();
+				echo "removido(a) com sucesso";
+			}catch(Exception $e){
+				echo $e;
+			}
 		}
 		
 		public function inserir($campos,$tabela){
