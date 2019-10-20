@@ -1,0 +1,21 @@
+<?php
+	require_once("../classeLayout/classeCabecalhoHTML.php");
+	require_once("cabecalho.php");
+	require_once("../classeLayout/classeTabela.php");
+	
+	require_once("conexao.php");
+	require_once("classeControllerBD.php");
+	
+	require_once("configuracoes_listar.php");
+	
+	$c = new ControllerBD($conexao);
+	
+	$r = $c->selecionar($colunas,$t,null);
+	
+	while($linha = $r->fetch(PDO::FETCH_ASSOC)){
+		$matriz[] = $linha;
+	}
+	
+	$t = new Tabela($matriz,$t[0][0]);
+	$t->exibe();
+?>
