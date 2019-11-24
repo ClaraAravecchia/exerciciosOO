@@ -1,0 +1,36 @@
+<?php
+	require_once("InterfaceExibicao.php");
+	class Button implements Exibicao{
+		private $texto;
+		private $id;
+		private $class;
+		private $type;
+
+		public function __construct($vetor){
+			$this->texto = $vetor["texto"];
+
+			if(isset($vetor["class"])){
+				$this->class = $vetor["class"];
+			}
+			if(isset($vetor["id"])){
+				$this->id = $vetor["id"];
+			}
+		}
+		
+		public function exibe(){
+			echo "<button"
+			if($this->type!=null){
+				echo"type= $this->type";
+			}
+			if($this->classe!=null){
+				echo"class= $this->classe";
+			}
+			if($this->id!=null){
+				echo"type= $this->id";
+			}
+			
+			echo">$this->texto</button>";
+		}
+		
+	}
+?>
